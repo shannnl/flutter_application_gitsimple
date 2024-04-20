@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, themeModel, localeModel, child) {
           return MaterialApp(
             theme: ThemeData(
-              primarySwatch: themeModel.theme,
+              // primarySwatch: themeModel.theme,
+              primaryColor: themeModel.theme,
             ),
             onGenerateTitle: (context) {
               return GmLocalizations.of(context).title;
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
               // 本地化的代理类
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
               GmLocalizationsDelegate()
             ],
             localeResolutionCallback: (_locale, supportedLocales) {
