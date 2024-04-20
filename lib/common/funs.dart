@@ -27,8 +27,8 @@ Widget gmAvatar(String url, {
 }
 
 void showToast(String text, {
-  gravity: ToastGravity.CENTER,
-  toastLength: Toast.LENGTH_SHORT,
+  gravity = ToastGravity.CENTER,
+  toastLength = Toast.LENGTH_SHORT,
 }) {
   Fluttertoast.showToast(
     msg: text,
@@ -79,7 +79,7 @@ void showLoading(context, [String? text]) {
                     style: Theme
                         .of(context)
                         .textTheme
-                        .bodyText2,
+                        .bodyMedium,
                   ),
                 ),
               ],
